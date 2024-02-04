@@ -1,0 +1,57 @@
+#include<stdio.h>
+int sub(int **p,int m,int n){
+int f=0,k;
+int s=**(p);
+  for(int i=0;i<m;i++)
+{ if(s!=*(*(p+i)+i))
+    return 0;
+}
+f= 1;
+
+for(int i=1;i<m;i++)
+{ s=*(*(p+0)+i);k=1;
+    for(int j=i+1;j<n;j++)
+    {
+    if(*(*(p+k)+j)!=s)
+        return 0;
+        k++;
+    }
+
+/*/A sub-toeplitz matrix is like a game board where all the diagonal lines from the top-leŌ to the
+boƩom-right have the same numbers. The starƟng element of the diagonal line must be from the
+first row (0th indexed row). If every diagonal has same numbers, it's a sub-toeplitz matrix, and the
+funcƟon should return true. If any diagonal has different numbers, then it's not a sub-toeplitz matrix,
+and the funcƟon should return false.
+Take an m x n matrix as input and determine if the matrix is sub-toeplitz or not.
+Constraints:
+ You must allocate memory to each array with dynamically.
+ You must use pointer arithmeƟc for indexing the array.
+ You must deallocate the memory properly aŌerwards.
+Sample I/O:
+Input Output
+3 4 True
+3 4 False */
+
+}return 1;
+}
+   int main(){
+   int m;int n;
+   scanf("%d %d",&m,&n);
+
+   int **p=malloc(m*sizeof(int *));
+   for(int i=0;i<m;i++)
+   { *(p+i)=malloc(n*sizeof(int));
+
+   }
+   for(int i=0;i<m;i++)
+   {
+       for(int j=0;j<n;j++)
+        scanf("%d",*(p+i)+j);
+   }
+   int f=sub(p,m,n);
+  if(f==0) printf("False");
+   else printf("True");
+
+
+
+   }
